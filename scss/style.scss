@@ -1,0 +1,262 @@
+@import "reset.scss";
+@import "commun.scss";
+
+/* HEADER test */
+
+header {
+    position: relative;
+    height: 63px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 15px rgba($color: $noir, $alpha: 0.5);
+    
+    .header__divback {
+        position: absolute;
+        left: 15px;
+        font-size: 1.5em;
+        color: $noir;
+    }
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 63px;
+        position: absolute;
+        color: $noir;
+        font-size: 2em;
+    }
+ 
+}
+
+/* Input avec choix de ville*/
+.sectionchoixville {
+    height: 50px;
+    width: 100%;
+    background-color: $grisfoncé;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .sectionchoixville__iconinput {
+        
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        form {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+
+            .sectionchoixville__icon {
+                width: 150px;
+                position: absolute;
+                font-size: 1.2em;
+                margin-right: 10px;
+                color: rgba($color: $noir, $alpha: 0.8);
+            }
+            .sectionchoixville__input {
+                z-index: 100;
+                background-color: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                height: 45px;
+                width: 99.7%;
+                border: none;
+                font-family: $texte;
+                font-size: 1em;
+            }
+
+            input:focus {
+                outline: 2px solid $primaire;
+                color: darken($primaire, 10);
+            }
+            
+            input::placeholder {
+                display: flex;
+                color: $noir;
+            }
+        }
+    }
+}
+
+/* Hero-bannière titre, description + button */
+.heroban {
+    z-index: 10;
+    height: 288px;
+    width: 100%;
+    padding-top: 45px;
+    padding-bottom: 55px;
+    background-color: $grisclaire;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 2px rgba($color: $noir, $alpha: 0.1);
+
+    .heroban__titre {
+        font-size: 1.5em;
+        font-weight: 800;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 75%;
+    }
+    .heroban__soustitre {
+        font-size: 1.1em;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 15px;
+        width: 90%;
+    }
+}
+
+main {
+    background-color: $blanc;
+    height: 1666px;
+    width: 100%;
+     
+}
+
+/* MAIN - Fonctionnement */
+.fonctionnement {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px 55px 35px;
+    height: 440px;
+    width: 100%;
+    max-width: 690px;
+    margin: 0 auto;
+    background-color: $blanc;
+
+    .fonctionnement__titre {
+        margin-bottom: 35px;
+    }
+
+    .fonctionnement__bloccartes {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+/* MAIN - Restaurants */
+.bloc_restaurants {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px;
+    height: 1226px;
+    width: 100%;
+    background-color: $grisclaire;
+
+    .bloc_restaurants__titre {
+        max-width: 690px;
+        width: 100%;
+        margin: 0 auto 35px auto;
+    }
+
+}
+
+/* carte acceuil restaurants */
+
+.bloc_cartes_restaurants {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.carte_restaurant {
+    position: relative;
+    background-color: fuchsia;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 100%;
+    max-width: 690px;
+    margin: 0 auto;
+    border-radius: $raduis20;
+    box-shadow: $ombre2;
+
+    .carte_restaurant__blocimg {
+
+        height: 175px;
+        width: 100%;
+
+        .carte_restaurant__img {
+            object-position: center;
+            object-fit: cover;
+            height: 175px;
+            width: 100%;
+            border-radius: $raduisimg20;
+        }
+    }
+
+    .carte_restaurant__bloctexte {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 75px;
+        width: 100%;
+        background-color: $blanc;
+        border-radius: $raduistxt20;
+
+        .carte_restaurant__texte {
+            color: $noir;
+            padding: $padtexteR;
+            border-radius: $raduisBG20;
+            height: 75px;
+            width: 100%;
+            background-color: gold;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+    
+            .carte_restaurant__nom {
+                font-weight: bold;
+            }
+        }
+
+        .carte_restaurant__blocicon {
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            background-color: hotpink;
+            height: 75px;
+            width: 90px;
+            border-radius: $raduisBD20;
+            
+            .carte_restaurant__icon {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $noir;
+                font-size: 1.7em;
+                height: 75px;
+                width: 75px;
+            }
+    
+            .iconplein {
+                color: rgba($color: $primaire, $alpha: 0.8);
+            }
+        }
+    }
+
+    
+}

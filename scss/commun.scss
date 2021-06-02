@@ -1,0 +1,130 @@
+/* Elements */
+$primaire: #9356DC;
+$secondaire: #ff79DA;
+$tertiaire: #99e2d0;
+$grisclaire: #F6F6F6;
+$grisfoncé: #EAEAEA;
+$nouveau: #169475;
+$blanc: #FFF;
+$noir: #000000;
+/* -----typo----- */
+$titre: 'Shrikhand', cursive, sans-serif;
+$texte: 'Roboto', sans-serif;
+/* -----ombre portée----- */
+$ombre: 0 0 12px rgba($color: $noir, $alpha: 0.4);
+$ombre2: 0 5px 10px rgba($color: $noir, $alpha: 0.2);
+/* -----raduis----- */
+$raduis25: 25px;
+$raduis20: 20px;
+$raduisimg20: 20px 20px 0 0;
+$raduistxt20: 0 0 20px 20px;
+$raduisBG20: 0 0 0 20px;
+$raduisBD20: 0 0 20px 0;
+$raduis50: 50%;
+/* -----padding----- */
+$padtexteR: 10px 0 10px 15px;
+
+
+/* ---- Global ----*/
+body {
+    background-color: $grisfoncé;
+    font-family: $texte;
+}
+
+h1 {
+    font-family: $titre;
+}
+
+/* HEADER */
+
+
+/* ---- BOUTON ----*/
+.bouton {
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 400;
+    color: $blanc;
+    border: none;
+    border-radius: $raduis25;
+    height: 50px;
+    width: 218px;
+    margin: 0 auto;
+    background: $primaire;
+    background: linear-gradient(0deg, $primaire 0%, $secondaire 120%);
+    box-shadow: $ombre;
+
+    &:hover {
+        background: linear-gradient(0deg, lighten($primaire, 2) 0%, lighten($secondaire, 2) 120%);
+        box-shadow: 0 0 12px rgba($color: $noir, $alpha: 0.5);
+    }
+}
+
+/* ---------- LISTE DE CARTES ---------- */
+
+/* 1 - Carte Type Un Classique */
+.cartetypeun {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    height: 75px;
+    width: 100%;
+    background-color: $grisclaire;
+    border-radius: $raduis25;
+    box-shadow: $ombre2;
+
+    .cartetypeun__nombre {
+        position: absolute;
+        left: -12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .85em;
+        border-radius: $raduis50;
+        height: 24px;
+        width: 24px;
+        color: $blanc;
+        background-color: $primaire;
+    }
+
+    .cartetypeun__icon {
+        position: absolute;
+        left: 10%;
+        color: lighten($noir, 20);
+    }
+}
+
+/* 2 - Carte Type un Coloré */
+.cartecoloré {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    height: 75px;
+    width: 100%;
+    background-color: lighten($primaire, 31);
+    border-radius: $raduis25;
+    box-shadow: $ombre2;
+
+    .cartecoloré__nombre {
+        position: absolute;
+        left: -12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .85em;
+        border-radius: $raduis50;
+        height: 24px;
+        width: 24px;
+        color: $blanc;
+        background-color: $primaire;
+    }
+
+    .cartecoloré__icon {
+        color: $primaire;
+        position: absolute;
+        left: 10%;
+    }
+}

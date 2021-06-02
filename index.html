@@ -1,15 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/347b4bbeba.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./scss/style.css">
     <title>ohmyfood</title>
 </head>
 
 <body>
-    <h1>ohmyfood</h1>
+    <header>
+        <h1>ohmyfood</h1>
+    </header>
+
+    <div class="sectionchoixville">
+        <div class="sectionchoixville__iconinput">
+            <form action=""> 
+                <i class="fas fa-map-marker-alt sectionchoixville__icon"></i>
+                <input class="sectionchoixville__input" type="text" placeholder="Paris, Belleville">
+            </form>
+        </div>
+    </div>
+
+    <section class="heroban">
+        <h2 class="heroban__titre">Réservez le menu qui vous convient</h2>
+        <p class="heroban__soustitre">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+        <button class="heroban__bouton bouton">Explorer nos restaurants</button>
+    </section>
+
+    <main>
+        <section class="fonctionnement">
+
+            <h2 class="fonctionnement__titre">Fonctionnement</h2>
+
+            <div class="fonctionnement__bloccartes">
+
+                <div class="cartetypeun">
+                    <div class="cartetypeun__nombre">1</div>
+                    <i class="fas fa-mobile-alt cartetypeun__icon"></i>
+                    <div class="cartetypeun__texte">Choisissez un restaurant</div>
+                </div>
+
+                <div class="cartetypeun">
+                    <div class="cartetypeun__nombre">2</div>
+                    <i class="fas fa-list cartetypeun__icon"></i>
+                    <div class="cartetypeun__texte">Composez votre menu</div>
+                </div>
+
+                <div class="cartecoloré">
+                    <div class="cartecoloré__nombre">3</div>
+                    <i class="fas fa-store cartecoloré__icon "></i>
+                    <div class="cartecoloré__texte">Dégustez au restaurant</div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="bloc_restaurants">
+
+            <h2 class="bloc_restaurants__titre">Restaurants</h2>
+
+            <div class="bloc_cartes_restaurants">
+
+                <div class="carte_restaurant">
+                    <a class="carte_restaurant__blocimg" href="menu-1f.html">
+                        <img class="carte_restaurant__img" src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="plats gastronomique">
+                    </a>
+
+                    <div class="carte_restaurant__bloctexte">
+
+                        <a class="carte_restaurant__texte" href="menu-1f.html">
+                            <div class="carte_restaurant__nom">La palette du goût</div>
+                            <div class="carte_restaurant__lieu">Ménilmontant</div>
+                        </a>
+
+                        <a class="carte_restaurant__blocicon">
+                            <i class="fas fa-heart carte_restaurant__icon iconplein"></i>
+                            <i class="far fa-heart carte_restaurant__icon"></i>    
+                        </a>
+
+                    </div>
+                </div>
+
+                
+
+
+
+
+            </div>
+
+        </section>
+
+
+
+
+
+
+    </main>
+
+
+
+
 </body>
 
 </html>
