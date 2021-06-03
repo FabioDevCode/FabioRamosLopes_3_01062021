@@ -340,6 +340,7 @@ header h1 {
 }
 
 main {
+  position: relative;
   background-color: #FFF;
   height: 1666px;
   width: 100%;
@@ -354,7 +355,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 50px 20px 55px 35px;
+  padding: 50px 0;
   height: 440px;
   width: 100%;
   max-width: 690px;
@@ -363,7 +364,7 @@ main {
 }
 
 .fonctionnement .fonctionnement__titre {
-  margin-bottom: 35px;
+  margin: 0 0 35px 20px;
 }
 
 .fonctionnement .fonctionnement__bloccartes {
@@ -380,6 +381,8 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-left: 32px;
+  padding-right: 20px;
   height: 100%;
   width: 100%;
 }
@@ -425,7 +428,6 @@ main {
 
 .carte_restaurant {
   position: relative;
-  background-color: fuchsia;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -1,0 +1,143 @@
+
+.conteneur_chargement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1000;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #F6F6F6;
+    animation: loaderNone 3s linear 1;
+    top: -100%;
+    opacity: 0;
+}
+
+@keyframes loaderNone {
+    0% {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    95% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+h1 {
+    position: absolute;
+    font-size: 30px;
+}
+
+/* BOX icon */
+.box_icon {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    animation: rotateDroite 6S linear infinite;
+}
+
+i {
+    font-size: 40px;
+    padding: 0;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+}
+
+.deg0 {
+    position: absolute;
+    top: 0;
+    left: 130px;
+    color: #9356DC;
+}
+
+.deg90 {
+    transform: rotate(90deg);
+    position: absolute;
+    top: 130px;
+    right: 3px;
+    color: #ff79DA;
+}
+
+.deg180 {
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 0;
+    left: 130px;
+    color: #9356DC;
+}
+
+.deg270 {
+    transform: rotate(270deg);
+    position: absolute;
+    top: 130px;
+    left: 3px;
+    color: #ff79DA;
+}
+
+@keyframes rotateDroite {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+/* TRAIT LOADER */ 
+
+.traitloader {
+    position: absolute;
+    height: 210px;
+    width: 210px;
+    border-top: 10px solid #ff79DA;
+    border-left: 10px solid transparent;
+    border-radius: 50%;
+    animation: rotateGauche 3s linear infinite;
+}
+
+.traitloader2 {
+    position: absolute;
+    height: 210px;
+    width: 210px;
+    border-bottom: 10px solid #ff79DA;
+    border-right: 10px solid transparent;
+    border-radius: 50%;
+    animation: rotateGauche 3s linear infinite;
+}
+
+@keyframes rotateGauche {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+
+}
+
+/* Classic loader */
+
+.classicloader {
+    position: absolute;
+    height: 330px;
+    width: 330px;
+    border-left: 5px solid #9356DC;
+    border-right: 5px solid #9356DC;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-radius: 50%;
+    animation: rotateDroite 2S linear infinite;
+}
