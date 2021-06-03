@@ -1,0 +1,138 @@
+.conteneur_chargement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1000;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #F6F6F6;
+    animation: loaderNone 3s linear 1;
+    top: -100%;
+    opacity: 0;
+
+    .conteneur_chargement__box_icon {
+        position: relative;
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        animation: rotateDroite 6S linear infinite;
+
+        i {
+            position: absolute;
+        }
+        
+        .fa-utensils {
+            font-size: 40px;
+            padding: 0;
+            margin: 0;
+            text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+        }
+        
+        .deg0 {
+            top: 0;
+            left: 130px;
+            color: #9356DC;
+        }
+        
+        .deg90 {
+            transform: rotate(90deg);
+            top: 130px;
+            right: 3px;
+            color: #ff79DA;
+        }
+        
+        .deg180 {
+            transform: rotate(180deg);
+            bottom: 0;
+            left: 130px;
+            color: #9356DC;
+        }
+        
+        .deg270 {
+            transform: rotate(270deg);
+            top: 130px;
+            left: 3px;
+            color: #ff79DA;
+        }
+    }
+
+    .traitloader {
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        border-top: 5px solid #ff79DA;
+        border-left: 5px solid transparent;
+        border-radius: 50%;
+        animation: rotateGauche 3s linear infinite;
+    }
+    
+    .traitloader2 {
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        border-bottom: 5px solid #ff79DA;
+        border-right: 5px solid transparent;
+        border-radius: 50%;
+        animation: rotateGauche 3s linear infinite;
+    }
+
+    .classicloader {
+        position: absolute;
+        height: 335px;
+        width: 335px;
+        border-left: 5px solid #9356DC;
+        border-right: 5px solid #9356DC;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-radius: 50%;
+        animation: rotateDroite 2S linear infinite;
+    }
+
+    .conteneur_chargement__titre {
+        position: absolute;
+        font-size: 30px;
+    }
+
+}
+
+@keyframes rotateGauche {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+
+}
+
+@keyframes rotateDroite {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes loaderNone {
+    0% {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    95% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
