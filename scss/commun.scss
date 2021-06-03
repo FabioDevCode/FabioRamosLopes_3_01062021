@@ -34,6 +34,17 @@ h1 {
     font-family: $titre;
 }
 
+h6 {
+    font-family: $titre;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 63px;
+    position: absolute;
+    color: $noir;
+    font-size: 2em;
+}
+
 /* HEADER */
 
 
