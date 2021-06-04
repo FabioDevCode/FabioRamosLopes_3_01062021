@@ -64,9 +64,10 @@ h6 {
     box-shadow: $ombre;
 
     &:hover {
-        background: linear-gradient(0deg, lighten($primaire, 2) 0%, lighten($secondaire, 2) 120%);
-        box-shadow: 0 0 12px rgba($color: $noir, $alpha: 0.5);
+        background: linear-gradient(0deg, lighten($primaire, 3) 0%, lighten($secondaire, 3) 120%);
+        box-shadow: 0 0 12px rgba($color: $noir, $alpha: 0.6);
     }
+
 }
 
 /* ---------- LISTE DE CARTES ---------- */
@@ -137,4 +138,15 @@ h6 {
         position: absolute;
         left: 10%;
     }
+}
+
+/* Fonctionnement Bouton Like */
+
+#bouton_like:target .coeur_plein {
+    display:flex;
+    
+}
+
+#bouton_like:target .premier_coeur {
+    display:none;
 }

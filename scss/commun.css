@@ -51,10 +51,10 @@ h6 {
 }
 
 .bouton:hover {
-  background: -webkit-gradient(linear, left bottom, left top, from(#985ede), color-stop(120%, #ff83dd));
-  background: linear-gradient(0deg, #985ede 0%, #ff83dd 120%);
-  -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+  background: -webkit-gradient(linear, left bottom, left top, from(#9b63df), color-stop(120%, #ff88de));
+  background: linear-gradient(0deg, #9b63df 0%, #ff88de 120%);
+  -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
 }
 
 /* ---------- LISTE DE CARTES ---------- */
@@ -150,5 +150,16 @@ h6 {
   color: #9356DC;
   position: absolute;
   left: 10%;
+}
+
+/* Fonctionnement Bouton Like */
+#bouton_like:target .coeur_plein {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#bouton_like:target .premier_coeur {
+  display: none;
 }
 /*# sourceMappingURL=commun.css.map */

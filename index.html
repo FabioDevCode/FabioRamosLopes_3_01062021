@@ -8,14 +8,13 @@
     <script src="https://kit.fontawesome.com/347b4bbeba.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/logo/icononglet.jpg">
     <link rel="stylesheet" href="./scss/style.css">
     <title>ohmyfood</title>
 </head>
 
 <body>
-    <!---------------------------------------------------------LOADER DE LA PAGE--->
     <section class="conteneur_chargement">
-
         <div class="conteneur_chargement__box_icon">
             <i class="fas fa-utensils deg0"></i>
             <i class="fas fa-utensils deg90"></i>
@@ -30,7 +29,7 @@
         
         <h6 class="conteneur_chargement__titre">ohmyfood</h6>
     </section>
-    <!---------------------------------------------------------DEBUT DE LA PAGE--->
+    
     <header>
         <h1>ohmyfood</h1>
     </header>
@@ -47,9 +46,9 @@
     <section class="heroban">
         <h2 class="heroban__titre">Réservez le menu qui vous convient</h2>
         <p class="heroban__soustitre">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <button class="heroban__bouton bouton">Explorer nos restaurants</button>
+        <button class="heroban__bouton bouton"><a href="#lesrestauratns">Explorer nos restaurants</a></button>
     </section>
-
+    
     <main>
         <section class="fonctionnement">
 
@@ -79,42 +78,135 @@
 
         </section>
 
-        <section class="bloc_restaurants">
+        <section class="bloc_restaurants" id="lesrestauratns">
+            <section class="bloc_restaurants" id="bouton_like">
+                <h2 class="bloc_restaurants__titre">Restaurants</h2>
+                <div class="bloc_cartes_restaurants">
+    
 
-            <h2 class="bloc_restaurants__titre">Restaurants</h2>
-
-            <div class="bloc_cartes_restaurants">
-
-                <div class="carte_restaurant">
-                    <a class="carte_restaurant__blocimg" href="menu-1f.html">
-                        <img class="carte_restaurant__img" src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="plats gastronomique">
-                    </a>
-
-                    <div class="carte_restaurant__bloctexte">
-
-                        <a class="carte_restaurant__texte" href="menu-1f.html">
-                            <div class="carte_restaurant__nom">La palette du goût</div>
-                            <div class="carte_restaurant__lieu">Ménilmontant</div>
+                    <div class="carte_restaurant">
+                        <a class="carte_restaurant__blocimg" href="menu-3pg.html">
+                            <img class="carte_restaurant__img" src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="plats gastronomique">
                         </a>
-
-                        <a class="carte_restaurant__blocicon">
-                            <i class="fas fa-heart carte_restaurant__icon iconplein"></i>
-                            <i class="far fa-heart carte_restaurant__icon"></i>    
-                        </a>
-
+    
+                        <div class="carte_restaurant__bloctexte">
+    
+                            <a class="carte_restaurant__texte" href="menu-3pg.html">
+                                <div class="carte_restaurant__nom">La palette du goût</div>
+                                <div class="carte_restaurant__lieu">Ménilmontant</div>
+                            </a>
+    
+                            <div class="carte_restaurant__blocicon">
+                                <a href="#bouton_like">
+                                    <i class="far fa-heart carte_restaurant__icon premier_coeur"></i>
+                                </a> 
+                                <a href="#lesrestauratns">
+                                    <i class="fas fa-heart carte_restaurant__icon coeur_plein"></i>
+                                </a>
+                            </div>
+    
+                        </div>
                     </div>
+
+
+                    <div class="carte_restaurant">
+                        <a class="carte_restaurant__blocimg" href="menu-2ne.html">
+                            <img class="carte_restaurant__img" src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="plats gastronomique">
+                        </a>
+    
+                        <div class="carte_restaurant__bloctexte">
+    
+                            <a class="carte_restaurant__texte" href="menu-2ne.html">
+                                <div class="carte_restaurant__nom">La note enchantée</div>
+                                <div class="carte_restaurant__lieu">Charonne</div>
+                            </a>
+    
+                            <div class="carte_restaurant__blocicon">
+                                <a href="#bouton_like">
+                                    <i class="far fa-heart carte_restaurant__icon premier_coeur"></i>
+                                </a> 
+                                <a href="#lesrestauratns">
+                                    <i class="fas fa-heart carte_restaurant__icon coeur_plein"></i>
+                                </a>
+                            </div>
+    
+                        </div>
+                    </div>
+
+
+                    <div class="carte_restaurant">
+                        <a class="carte_restaurant__blocimg" href="menu-1f.html">
+                            <img class="carte_restaurant__img" src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="plats gastronomique">
+                        </a>
+    
+                        <div class="carte_restaurant__bloctexte">
+    
+                            <a class="carte_restaurant__texte" href="menu-1f.html">
+                                <div class="carte_restaurant__nom">À la française</div>
+                                <div class="carte_restaurant__lieu">Cité rouge</div>
+                            </a>
+    
+                            <div class="carte_restaurant__blocicon">
+                                <a href="#bouton_like">
+                                    <i class="far fa-heart carte_restaurant__icon premier_coeur"></i>
+                                </a> 
+                                <a href="#lesrestauratns">
+                                    <i class="fas fa-heart carte_restaurant__icon coeur_plein"></i>
+                                </a>
+                            </div>
+    
+                        </div>
+                    </div>
+
+
+                    <div class="carte_restaurant">
+                        <a class="carte_restaurant__blocimg" href="menu-4ds.html">
+                            <img class="carte_restaurant__img" src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="plats gastronomique">
+                        </a>
+    
+                        <div class="carte_restaurant__bloctexte">
+    
+                            <a class="carte_restaurant__texte" href="menu-4ds.html">
+                                <div class="carte_restaurant__nom">À la française</div>
+                                <div class="carte_restaurant__lieu">Cité rouge</div>
+                            </a>
+    
+                            <div class="carte_restaurant__blocicon">
+                                <a href="#bouton_like">
+                                    <i class="far fa-heart carte_restaurant__icon premier_coeur"></i>
+                                </a> 
+                                <a href="#lesrestauratns">
+                                    <i class="fas fa-heart carte_restaurant__icon coeur_plein"></i>
+                                </a>
+                            </div>
+    
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+        </section>
+
+        <footer>
+            <div>
+                <div>
+                    <i></i>
+                    <p></p>
                 </div>
 
-                
+                <div>
+                    <i></i>
+                    <p></p>
+                </div>
 
+                <p></p>
 
+                <a href="mailto:contact@ohmyfood.fr">Contact</a>
 
 
             </div>
-
-        </section>
-
-
+        </footer>
 
 
 

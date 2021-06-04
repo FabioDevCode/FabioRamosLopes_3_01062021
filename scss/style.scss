@@ -120,6 +120,18 @@ header {
         margin-bottom: 15px;
         width: 90%;
     }
+
+    .heroban__bouton {
+        a, a:visited {
+            color: $blanc;
+        }
+
+    }
+    
+}
+
+a {
+    color: $blanc;
 }
 
 main {
@@ -137,7 +149,7 @@ main {
     padding: 50px 0;
     height: 440px;
     width: 100%;
-    max-width: 690px;
+    max-width: 742px;
     margin: 0 auto;
     background-color: $blanc;
 
@@ -161,7 +173,7 @@ main {
 .bloc_restaurants {
     display: flex;
     flex-direction: column;
-    padding: 50px 20px;
+    
     height: 1226px;
     width: 100%;
     background-color: $grisclaire;
@@ -174,13 +186,21 @@ main {
 
 }
 
+#lesrestaurants {
+    padding: 0px;
+}
+
+#bouton_like {
+    padding: 50px 20px;
+}
+
 /* carte acceuil restaurants */
 
 .bloc_cartes_restaurants {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 
 }
@@ -192,7 +212,7 @@ main {
     height: 250px;
     width: 100%;
     max-width: 690px;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
     border-radius: $raduis20;
     box-shadow: $ombre2;
 
@@ -225,7 +245,6 @@ main {
             border-radius: $raduisBG20;
             height: 75px;
             width: 100%;
-            background-color: gold;
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
@@ -234,12 +253,11 @@ main {
                 font-weight: bold;
             }
         }
-
+        /* ---------- Bouton like ---------- */
         .carte_restaurant__blocicon {
             cursor: pointer;
             position: relative;
             display: flex;
-            background-color: hotpink;
             height: 75px;
             width: 90px;
             border-radius: $raduisBD20;
@@ -254,15 +272,13 @@ main {
                 height: 75px;
                 width: 75px;
             }
-    
-            .iconplein {
-                color: rgba($color: $primaire, $alpha: 0.8);
+
+            .coeur_plein {
+                color: $primaire;
+                display:none;
             }
+        
         }
     }
-
-    
 }
-
-
 
