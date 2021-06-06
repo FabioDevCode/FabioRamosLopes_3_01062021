@@ -1,7 +1,7 @@
 @import "loader.scss";
 @import "reset.scss";
 @import "commun.scss";
-
+@import "mixins.scss";
 
 /* HEADER test */
 header {
@@ -27,8 +27,6 @@ header {
         align-items: center;
         height: 63px;
         position: absolute;
-        color: $noir;
-        font-size: 2em;
     }
  
 }
@@ -125,9 +123,7 @@ header {
         a, a:visited {
             color: $blanc;
         }
-
     }
-    
 }
 
 a {
@@ -173,10 +169,14 @@ main {
 .bloc_restaurants {
     display: flex;
     flex-direction: column;
-    
+    padding: 0;
     height: 1226px;
     width: 100%;
     background-color: $grisclaire;
+
+    .bloc_restaurants2 {
+        padding: 50px 20px;
+    }
 
     .bloc_restaurants__titre {
         max-width: 690px;
@@ -184,14 +184,6 @@ main {
         margin: 0 auto 35px auto;
     }
 
-}
-
-#lesrestaurants {
-    padding: 0px;
-}
-
-#bouton_like {
-    padding: 50px 20px;
 }
 
 /* carte acceuil restaurants */
@@ -202,7 +194,6 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-
 }
 
 .carte_restaurant {
@@ -253,32 +244,19 @@ main {
                 font-weight: bold;
             }
         }
-        /* ---------- Bouton like ---------- */
-        .carte_restaurant__blocicon {
-            cursor: pointer;
-            position: relative;
-            display: flex;
-            height: 75px;
-            width: 90px;
-            border-radius: $raduisBD20;
-            
-            .carte_restaurant__icon {
-                position: absolute;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: $noir;
-                font-size: 1.7em;
-                height: 75px;
-                width: 75px;
-            }
-
-            .coeur_plein {
-                color: $primaire;
-                display:none;
-            }
-        
-        }
     }
 }
 
+/* ---------- PAGE DE RESTAURANT ---------*/
+
+.image_bannière {
+    width: 100%;
+    height: 300px;
+
+    img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+    }
+}

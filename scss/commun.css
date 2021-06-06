@@ -8,30 +8,36 @@
 body {
   background-color: #EAEAEA;
   font-family: "Roboto", sans-serif;
+  min-width: 320px;
 }
 
 h1 {
+  cursor: default;
+  font-size: 2em;
+  color: #000000;
+  font-family: "Shrikhand", cursive, sans-serif;
+}
+
+h3 {
+  cursor: default;
+  font-size: 1.8em;
+  color: #000000;
   font-family: "Shrikhand", cursive, sans-serif;
 }
 
 h6 {
+  cursor: default;
   font-family: "Shrikhand", cursive, sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 63px;
   position: absolute;
   color: #000000;
   font-size: 2em;
 }
 
-/* HEADER */
+/* --------- HEADER --------- */
 /* ---- BOUTON ----*/
 .bouton {
   cursor: pointer;
@@ -44,61 +50,41 @@ h6 {
   width: 218px;
   margin: 0 auto;
   background: #9356DC;
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), color-stop(120%, #ff79DA));
   background: linear-gradient(0deg, #9356DC 0%, #ff79DA 120%);
-  -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
 }
-
 .bouton:hover {
-  background: -webkit-gradient(linear, left bottom, left top, from(#9b63df), color-stop(120%, #ff88de));
   background: linear-gradient(0deg, #9b63df 0%, #ff88de 120%);
-  -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
-          box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
 }
 
 /* ---------- LISTE DE CARTES ---------- */
 /* 1 - Carte Type Un Classique */
 .cartetypeun {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   font-weight: bold;
   height: 75px;
   width: 100%;
   background-color: #F6F6F6;
   border-radius: 25px;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-
 .cartetypeun .cartetypeun__nombre {
   position: absolute;
   left: -12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: .85em;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85em;
   border-radius: 50%;
   height: 24px;
   width: 24px;
   color: #FFF;
   background-color: #9356DC;
 }
-
 .cartetypeun .cartetypeun__icon {
   position: absolute;
   left: 10%;
@@ -108,58 +94,104 @@ h6 {
 /* 2 - Carte Type un Coloré */
 .cartecoloré {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   font-weight: bold;
   height: 75px;
   width: 100%;
   background-color: #e7d9f7;
   border-radius: 25px;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-
 .cartecoloré .cartecoloré__nombre {
   position: absolute;
   left: -12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: .85em;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85em;
   border-radius: 50%;
   height: 24px;
   width: 24px;
   color: #FFF;
   background-color: #9356DC;
 }
-
 .cartecoloré .cartecoloré__icon {
   color: #9356DC;
   position: absolute;
   left: 10%;
 }
 
-/* Fonctionnement Bouton Like */
-#bouton_like:target .coeur_plein {
-  display: -webkit-box;
-  display: -ms-flexbox;
+/* -- FOOTER -- */
+#pieddepage {
+  height: 200px;
+  width: 100%;
+  background-color: #353535;
+}
+#pieddepage .pieddepage_bloctexte {
+  width: 100%;
+  max-width: 690px;
+  margin: 0 auto;
+  padding: 20px;
+}
+#pieddepage .pieddepage_bloctexte h4 {
+  font-family: "Shrikhand", cursive, sans-serif;
+  font-size: 1.1em;
+  color: #FFF;
+  margin-bottom: 20px;
+  letter-spacing: 0.08em;
+}
+#pieddepage .pieddepage_bloctexte .pieddepage_bloctexte__texte {
   display: flex;
+  align-items: center;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+#pieddepage .pieddepage_bloctexte .pieddepage_bloctexte__texte p {
+  margin-bottom: 10px;
+}
+#pieddepage .pieddepage_bloctexte .pieddepage_bloctexte__texte i {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+#pieddepage .pieddepage_bloctexte .pieddepage_bloctexte__texte p:hover, #pieddepage .pieddepage_bloctexte .pieddepage_bloctexte__texte a:hover {
+  text-decoration: underline;
 }
 
-#bouton_like:target .premier_coeur {
-  display: none;
+/* ------ Bloc like ------- */
+.carte_restaurant__blocicon {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  height: 75px;
+  width: 90px;
+  border-radius: 0 0 20px 0;
 }
-/*# sourceMappingURL=commun.css.map */
+.carte_restaurant__blocicon .carte_restaurant__icon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7em;
+  height: 75px;
+  width: 75px;
+}
+.carte_restaurant__blocicon .coeur_plein {
+  background: linear-gradient(0deg, #9356DC 0%, #ff79DA 80%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  opacity: 0;
+}
+.carte_restaurant__blocicon .coeur_plein:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.carte_restaurant__blocicon .premier_coeur {
+  color: #000000;
+}
+.carte_restaurant__blocicon .premier_coeur:hover {
+  color: transparent;
+}/*# sourceMappingURL=commun.css.map */

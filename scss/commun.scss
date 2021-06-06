@@ -5,6 +5,7 @@ $tertiaire: #99e2d0;
 $grisclaire: #F6F6F6;
 $grisfoncé: #EAEAEA;
 $nouveau: #169475;
+$footer: #353535;
 $blanc: #FFF;
 $noir: #000000;
 /* -----typo----- */
@@ -28,13 +29,25 @@ $padtexteR: 10px 0 10px 15px;
 body {
     background-color: $grisfoncé;
     font-family: $texte;
+    min-width: 320px;
 }
 
 h1 {
+    cursor: default;
+    font-size: 2em;
+    color: $noir;
+    font-family: $titre;
+}
+
+h3 {
+    cursor: default;
+    font-size: 1.8em;
+    color: $noir;
     font-family: $titre;
 }
 
 h6 {
+    cursor: default;
     font-family: $titre;
     display: flex;
     justify-content: center;
@@ -45,8 +58,7 @@ h6 {
     font-size: 2em;
 }
 
-/* HEADER */
-
+/* --------- HEADER --------- */
 
 /* ---- BOUTON ----*/
 .bouton {
@@ -140,13 +152,92 @@ h6 {
     }
 }
 
-/* Fonctionnement Bouton Like */
-
-#bouton_like:target .coeur_plein {
-    display:flex;
+/* -- FOOTER -- */
+#pieddepage {
     
+    height: 200px;
+    width: 100%;
+    background-color: $footer;
+
+    .pieddepage_bloctexte {
+        width: 100%;
+        max-width: 690px;
+        margin: 0 auto;
+        padding: 20px;
+
+        h4 {
+            font-family: $titre;
+            font-size: 1.1em;
+            color: $blanc;
+            margin-bottom: 20px;
+            letter-spacing: 0.08em;
+        }
+
+        .pieddepage_bloctexte__texte {
+            display: flex;
+            align-items: center;
+            color: $blanc;
+            cursor: pointer;
+            font-size: 0.9em;
+
+            p {
+                margin-bottom: 10px;
+            }
+
+            i {
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+
+            p:hover, a:hover {
+                text-decoration: underline;
+            }
+
+        }
+
+    }
 }
 
-#bouton_like:target .premier_coeur {
-    display:none;
+/* ------ Bloc like ------- */
+
+.carte_restaurant__blocicon {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    height: 75px;
+    width: 90px;
+    border-radius: $raduisBD20;
+    
+    .carte_restaurant__icon {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.7em;
+        height: 75px;
+        width: 75px;
+    }
+
+    .coeur_plein {
+        background: linear-gradient(0deg, $primaire 0%, $secondaire 80%);
+        background-clip: text;
+        color: transparent;
+        opacity: 0;
+
+        &:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        
+    }
+
+    .premier_coeur {
+
+        color: $noir;
+
+        &:hover {
+            color: transparent;
+        }
+    }
+
 }
