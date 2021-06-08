@@ -1,4 +1,59 @@
 @charset "UTF-8";
+h6, h3, h1 {
+  font-family: "Shrikhand", cursive, sans-serif;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.image_bannière img, .carte_restaurant .carte_restaurant__blocimg .carte_restaurant__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+h6, h3, h1 {
+  cursor: default;
+}
+
+.carte_restaurant .carte_restaurant__bloctexte, .sectionchoixville .sectionchoixville__iconinput form .sectionchoixville__input, .sectionchoixville .sectionchoixville__iconinput form, .sectionchoixville .sectionchoixville__iconinput, .sectionchoixville, header h1, header, .carte_restaurant__blocicon .carte_restaurant__icon, .cartecoloré .cartecoloré__nombre, .cartecoloré, .cartetypeun .cartetypeun__nombre, .cartetypeun, h6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroban .heroban__soustitre, .heroban .heroban__titre {
+  justify-content: center;
+  text-align: center;
+}
+
+.bloc_cartes_restaurants, .fonctionnement .fonctionnement__bloccartes, .heroban {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#main_restaurant, main, .sectionchoixville .sectionchoixville__iconinput form, header, .carte_restaurant__blocicon, .cartecoloré, .cartetypeun {
+  position: relative;
+}
+
+.cartes, .sectionchoixville .sectionchoixville__iconinput form .sectionchoixville__icon, header h1, header .header__divback, .carte_restaurant__blocicon .carte_restaurant__icon, .cartecoloré .cartecoloré__icon, .cartecoloré .cartecoloré__nombre, .cartetypeun .cartetypeun__icon, .cartetypeun .cartetypeun__nombre, h6 {
+  position: absolute;
+}
+
+*, ::before, ::after, h1, h2, h3, h4, h5, h6 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .conteneur_chargement {
   display: flex;
   flex-direction: column;
@@ -191,51 +246,24 @@ body {
     opacity: 0;
   }
 }
-*, ::before, ::after, h1, h2, h3, h4, h5, h6 {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-/* Elements */
-/* -----typo----- */
-/* -----ombre portée----- */
-/* -----raduis----- */
-/* -----padding----- */
 /* ---- Global ----*/
 body {
   background-color: #EAEAEA;
-  font-family: "Roboto", sans-serif;
   min-width: 320px;
 }
 
 h1 {
-  cursor: default;
   font-size: 2em;
   color: #000000;
-  font-family: "Shrikhand", cursive, sans-serif;
 }
 
 h3 {
-  cursor: default;
   font-size: 1.8em;
   color: #000000;
-  font-family: "Shrikhand", cursive, sans-serif;
 }
 
 h6 {
-  cursor: default;
-  font-family: "Shrikhand", cursive, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 63px;
-  position: absolute;
   color: #000000;
   font-size: 2em;
 }
@@ -264,10 +292,6 @@ h6 {
 /* ---------- LISTE DE CARTES ---------- */
 /* 1 - Carte Type Un Classique */
 .cartetypeun {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-weight: bold;
   height: 75px;
   width: 100%;
@@ -276,11 +300,7 @@ h6 {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 .cartetypeun .cartetypeun__nombre {
-  position: absolute;
   left: -12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 0.85em;
   border-radius: 50%;
   height: 24px;
@@ -289,17 +309,12 @@ h6 {
   background-color: #9356DC;
 }
 .cartetypeun .cartetypeun__icon {
-  position: absolute;
   left: 10%;
   color: #333333;
 }
 
 /* 2 - Carte Type un Coloré */
 .cartecoloré {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-weight: bold;
   height: 75px;
   width: 100%;
@@ -308,11 +323,7 @@ h6 {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 .cartecoloré .cartecoloré__nombre {
-  position: absolute;
   left: -12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 0.85em;
   border-radius: 50%;
   height: 24px;
@@ -322,7 +333,6 @@ h6 {
 }
 .cartecoloré .cartecoloré__icon {
   color: #9356DC;
-  position: absolute;
   left: 10%;
 }
 
@@ -366,17 +376,12 @@ h6 {
 /* ------ Bloc like ------- */
 .carte_restaurant__blocicon {
   cursor: pointer;
-  position: relative;
   display: flex;
   height: 75px;
   width: 90px;
   border-radius: 0 0 20px 0;
 }
 .carte_restaurant__blocicon .carte_restaurant__icon {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 1.7em;
   height: 75px;
   width: 75px;
@@ -399,58 +404,38 @@ h6 {
   color: transparent;
 }
 
-/* HEADER test */
 header {
-  position: relative;
+  z-index: 500;
   height: 63px;
   width: 100%;
   background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
 header .header__divback {
-  position: absolute;
   left: 15px;
   font-size: 1.5em;
   color: #000000;
 }
 header h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 63px;
-  position: absolute;
 }
 
-/* Input avec choix de ville*/
 .sectionchoixville {
   height: 50px;
   width: 100%;
   background-color: #EAEAEA;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .sectionchoixville .sectionchoixville__iconinput {
   height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
 }
 .sectionchoixville .sectionchoixville__iconinput form {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 50px;
 }
 .sectionchoixville .sectionchoixville__iconinput form .sectionchoixville__icon {
+  height: auto;
   width: 150px;
-  position: absolute;
   font-size: 1.2em;
   margin-right: 10px;
   color: rgba(0, 0, 0, 0.8);
@@ -458,9 +443,6 @@ header h1 {
 .sectionchoixville .sectionchoixville__iconinput form .sectionchoixville__input {
   z-index: 100;
   background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   height: 45px;
   width: 99.7%;
@@ -471,6 +453,7 @@ header h1 {
 .sectionchoixville .sectionchoixville__iconinput form input:focus {
   outline: 2px solid #9356DC;
   color: #782cd3;
+  background-color: #EAEAEA;
 }
 .sectionchoixville .sectionchoixville__iconinput form input::-moz-placeholder {
   display: flex;
@@ -485,7 +468,6 @@ header h1 {
   color: #000000;
 }
 
-/* Hero-bannière titre, description + button */
 .heroban {
   z-index: 10;
   height: 288px;
@@ -493,24 +475,16 @@ header h1 {
   padding-top: 45px;
   padding-bottom: 55px;
   background-color: #F6F6F6;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
 .heroban .heroban__titre {
   font-size: 1.5em;
   font-weight: 800;
-  display: flex;
-  justify-content: center;
-  text-align: center;
   width: 75%;
 }
 .heroban .heroban__soustitre {
   font-size: 1.1em;
-  justify-content: center;
-  text-align: center;
   margin-bottom: 15px;
   width: 90%;
 }
@@ -523,7 +497,6 @@ a {
 }
 
 main {
-  position: relative;
   background-color: #FFF;
   height: 1666px;
   width: 100%;
@@ -544,10 +517,7 @@ main {
   margin: 0 0 35px 20px;
 }
 .fonctionnement .fonctionnement__bloccartes {
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   padding-left: 32px;
   padding-right: 20px;
   height: 100%;
@@ -575,10 +545,7 @@ main {
 /* carte acceuil restaurants */
 .bloc_cartes_restaurants {
   height: 100%;
-  display: flex;
-  flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
 }
 
 .carte_restaurant {
@@ -597,18 +564,11 @@ main {
   width: 100%;
 }
 .carte_restaurant .carte_restaurant__blocimg .carte_restaurant__img {
-  -o-object-position: center;
-     object-position: center;
-  -o-object-fit: cover;
-     object-fit: cover;
   height: 175px;
   width: 100%;
   border-radius: 20px 20px 0 0;
 }
 .carte_restaurant .carte_restaurant__bloctexte {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 75px;
   width: 100%;
   background-color: #FFF;
@@ -629,15 +589,47 @@ main {
 }
 
 /* ---------- PAGE DE RESTAURANT ---------*/
+#main_restaurant {
+  background-color: #F6F6F6;
+  border-radius: 25px 25px 0 0;
+  overflow: initial;
+}
+
 .image_bannière {
-  width: 100%;
   height: 300px;
+  width: 100%;
 }
 .image_bannière img {
-  width: 100%;
   height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  width: 100%;
+}
+
+.cartes {
+  height: 1200px;
+  width: 100%;
+  background-color: transparent;
+  top: 220px;
+}
+.cartes .cartes_bloctitre {
+  height: 80px;
+  width: 100%;
+  max-width: 690px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: tomato;
+  border-radius: 45px 45px 0 0;
+}
+.cartes .cartes_bloctitre h3 {
+  padding-left: 20px;
+}
+
+.bloc_carte {
+  height: 320px;
+  width: 100%;
+  max-width: 690px;
+  margin: 0 auto;
+  padding: 0 15px;
+  background-color: lightseagreen;
 }/*# sourceMappingURL=style.css.map */

@@ -1,59 +1,31 @@
-/* Elements */
-$primaire: #9356DC;
-$secondaire: #ff79DA;
-$tertiaire: #99e2d0;
-$grisclaire: #F6F6F6;
-$grisfoncé: #EAEAEA;
-$nouveau: #169475;
-$footer: #353535;
-$blanc: #FFF;
-$noir: #000000;
-/* -----typo----- */
-$titre: 'Shrikhand', cursive, sans-serif;
-$texte: 'Roboto', sans-serif;
-/* -----ombre portée----- */
-$ombre: 0 0 12px rgba($color: $noir, $alpha: 0.4);
-$ombre2: 0 5px 10px rgba($color: $noir, $alpha: 0.2);
-/* -----raduis----- */
-$raduis25: 25px;
-$raduis20: 20px;
-$raduisimg20: 20px 20px 0 0;
-$raduistxt20: 0 0 20px 20px;
-$raduisBG20: 0 0 0 20px;
-$raduisBD20: 0 0 20px 0;
-$raduis50: 50%;
-/* -----padding----- */
-$padtexteR: 10px 0 10px 15px;
 
 /* ---- Global ----*/
 body {
     background-color: $grisfoncé;
-    font-family: $texte;
+    @extend %font-family-texte;
     min-width: 320px;
 }
 
 h1 {
-    cursor: default;
+    @extend %default-cursor;
     font-size: 2em;
     color: $noir;
-    font-family: $titre;
+    @extend %font-family-titre;
 }
 
 h3 {
-    cursor: default;
+    @extend %default-cursor;
     font-size: 1.8em;
     color: $noir;
-    font-family: $titre;
+    @extend %font-family-titre;
 }
 
 h6 {
-    cursor: default;
-    font-family: $titre;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %default-cursor;
+    @extend %font-family-titre;
+    @extend %flex-center;
     height: 63px;
-    position: absolute;
+    @extend %absolute;
     color: $noir;
     font-size: 2em;
 }
@@ -68,8 +40,7 @@ h6 {
     color: $blanc;
     border: none;
     border-radius: $raduis25;
-    height: 50px;
-    width: 218px;
+    @include height-width(50px, 218px);
     margin: 0 auto;
     background: $primaire;
     background: linear-gradient(0deg, $primaire 0%, $secondaire 120%);
@@ -86,33 +57,27 @@ h6 {
 
 /* 1 - Carte Type Un Classique */
 .cartetypeun {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %relative;
+    @extend %flex-center;
     font-weight: bold;
-    height: 75px;
-    width: 100%;
+    @include height-width(75px, 100%);
     background-color: $grisclaire;
     border-radius: $raduis25;
     box-shadow: $ombre2;
 
     .cartetypeun__nombre {
-        position: absolute;
+        @extend %absolute;
         left: -12px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-center;
         font-size: .85em;
         border-radius: $raduis50;
-        height: 24px;
-        width: 24px;
+        @include height-width(24px, 24px);
         color: $blanc;
         background-color: $primaire;
     }
 
     .cartetypeun__icon {
-        position: absolute;
+        @extend %absolute;
         left: 10%;
         color: lighten($noir, 20);
     }
@@ -120,34 +85,28 @@ h6 {
 
 /* 2 - Carte Type un Coloré */
 .cartecoloré {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %relative;
+    @extend %flex-center;
     font-weight: bold;
-    height: 75px;
-    width: 100%;
+    @include height-width(75px, 100%);
     background-color: lighten($primaire, 31);
     border-radius: $raduis25;
     box-shadow: $ombre2;
 
     .cartecoloré__nombre {
-        position: absolute;
+        @extend %absolute;
         left: -12px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-center;
         font-size: .85em;
         border-radius: $raduis50;
-        height: 24px;
-        width: 24px;
+        @include height-width(24px, 24px);
         color: $blanc;
         background-color: $primaire;
     }
 
     .cartecoloré__icon {
         color: $primaire;
-        position: absolute;
+        @extend %absolute;
         left: 10%;
     }
 }
@@ -155,8 +114,7 @@ h6 {
 /* -- FOOTER -- */
 #pieddepage {
     
-    height: 200px;
-    width: 100%;
+    @include height-width(200px, 100%);
     background-color: $footer;
 
     .pieddepage_bloctexte {
@@ -202,20 +160,16 @@ h6 {
 
 .carte_restaurant__blocicon {
     cursor: pointer;
-    position: relative;
+    @extend %relative;
     display: flex;
-    height: 75px;
-    width: 90px;
+    @include height-width(75px, 90px);
     border-radius: $raduisBD20;
     
     .carte_restaurant__icon {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %absolute;
+        @extend %flex-center;
         font-size: 1.7em;
-        height: 75px;
-        width: 75px;
+        @include height-width(75px, 75px);
     }
 
     .coeur_plein {

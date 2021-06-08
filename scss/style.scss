@@ -1,63 +1,56 @@
-@import "loader.scss";
-@import "reset.scss";
-@import "commun.scss";
-@import "mixins.scss";
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_placeholders.scss";
+@import "_reset.scss";
+@import "_loader.scss";
+@import "_commun.scss";
 
-/* HEADER test */
+
+//---------------------HEADER
 header {
-    position: relative;
-    height: 63px;
-    width: 100%;
+    @extend %relative;
+    z-index: 500;
+    @include height-width(63px, 100%);
     background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-center;
     box-shadow: 0px 0px 15px rgba($color: $noir, $alpha: 0.5);
     
     .header__divback {
-        position: absolute;
+        @extend %absolute;
         left: 15px;
         font-size: 1.5em;
         color: $noir;
     }
 
     h1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-center;
         height: 63px;
-        position: absolute;
+        @extend %absolute;
     }
  
 }
 
-/* Input avec choix de ville*/
+//---------------------INPUT (choix de ville)
 .sectionchoixville {
-    height: 50px;
-    width: 100%;
+    @include height-width(50px, 100%);
     background-color: $grisfoncé;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-center;
+
     .sectionchoixville__iconinput {
         
         height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-center;
         width: 100%;
 
         form {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @extend %relative;
+            @extend %flex-center;
             width: 100%;
             height: 50px;
 
             .sectionchoixville__icon {
-                width: 150px;
-                position: absolute;
+                @include height-width(auto, 150px);
+                @extend %absolute;
                 font-size: 1.2em;
                 margin-right: 10px;
                 color: rgba($color: $noir, $alpha: 0.8);
@@ -65,12 +58,9 @@ header {
             .sectionchoixville__input {
                 z-index: 100;
                 background-color: transparent;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @extend %flex-center;
                 text-align: center;
-                height: 45px;
-                width: 99.7%;
+                @include height-width(45px, 99.7%);
                 border: none;
                 font-family: $texte;
                 font-size: 1em;
@@ -79,6 +69,7 @@ header {
             input:focus {
                 outline: 2px solid $primaire;
                 color: darken($primaire, 10);
+                background-color: $grisfoncé;
             }
             
             input::placeholder {
@@ -89,32 +80,26 @@ header {
     }
 }
 
-/* Hero-bannière titre, description + button */
+//---------------------HERO-BANNIERE (titre, description & bouton) 
 .heroban {
     z-index: 10;
-    height: 288px;
-    width: 100%;
+    @include height-width(288px, 100%);
     padding-top: 45px;
     padding-bottom: 55px;
     background-color: $grisclaire;
-    display: flex;
-    flex-direction: column;
+    @extend %flex-column;
     justify-content: space-between;
-    align-items: center;
     box-shadow: 0 0 2px rgba($color: $noir, $alpha: 0.1);
 
     .heroban__titre {
         font-size: 1.5em;
         font-weight: 800;
-        display: flex;
-        justify-content: center;
-        text-align: center;
+        @extend %flex-texte-center;
         width: 75%;
     }
     .heroban__soustitre {
         font-size: 1.1em;
-        justify-content: center;
-        text-align: center;
+        @extend %flex-texte-center;
         margin-bottom: 15px;
         width: 90%;
     }
@@ -131,11 +116,9 @@ a {
 }
 
 main {
-    position: relative;
+    @extend %relative;
     background-color: $blanc;
-    height: 1666px;
-    width: 100%;
-     
+    @include height-width(1666px, 100%);     
 }
 
 /* MAIN - Fonctionnement */
@@ -143,8 +126,7 @@ main {
     display: flex;
     flex-direction: column;
     padding: 50px 0;
-    height: 440px;
-    width: 100%;
+    @include height-width(440px, 100%);
     max-width: 742px;
     margin: 0 auto;
     background-color: $blanc;
@@ -154,14 +136,11 @@ main {
     }
 
     .fonctionnement__bloccartes {
-        display: flex;
-        flex-direction: column;
+        @extend %flex-column;
         justify-content: space-between;
-        align-items: center;
         padding-left: 32px;
         padding-right: 20px;
-        height: 100%;
-        width: 100%;
+        @include height-width(100%, 100%);
     }
 }
 
@@ -190,18 +169,15 @@ main {
 
 .bloc_cartes_restaurants {
     height: 100%;
-    display: flex;
-    flex-direction: column;
+    @extend %flex-column;
     justify-content: flex-start;
-    align-items: center;
 }
 
 .carte_restaurant {
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 250px;
-    width: 100%;
+    @include height-width(250px, 100%);
     max-width: 690px;
     margin: 0 auto 20px auto;
     border-radius: $raduis20;
@@ -209,24 +185,20 @@ main {
 
     .carte_restaurant__blocimg {
 
-        height: 175px;
-        width: 100%;
+        @include height-width(175px, 100%);
 
         .carte_restaurant__img {
-            object-position: center;
-            object-fit: cover;
-            height: 175px;
-            width: 100%;
+
+            @extend %img-position;
+            @include height-width(175px, 100%);
             border-radius: $raduisimg20;
         }
     }
 
     .carte_restaurant__bloctexte {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 75px;
-        width: 100%;
+        
+        @extend %flex-center;
+        @include height-width(75px, 100%);
         background-color: $blanc;
         border-radius: $raduistxt20;
 
@@ -234,8 +206,7 @@ main {
             color: $noir;
             padding: $padtexteR;
             border-radius: $raduisBG20;
-            height: 75px;
-            width: 100%;
+            @include height-width(75px, 100%);
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
@@ -249,14 +220,51 @@ main {
 
 /* ---------- PAGE DE RESTAURANT ---------*/
 
+#main_restaurant {
+    @extend %relative;
+    background-color: $grisclaire;
+    border-radius: 25px 25px 0 0;
+    overflow: initial;
+}
+
 .image_bannière {
-    width: 100%;
-    height: 300px;
+    
+    @include height-width(300px, 100%);
 
     img {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        object-position: center;
+
+        @include height-width(300px, 100%);
+        @extend %img-position;
     }
+}
+
+.cartes {
+    @extend %absolute;
+    @include height-width(1200px, 100%);
+    background-color: transparent;
+    top: 220px;
+
+    .cartes_bloctitre {
+        @include height-width(80px, 100%);
+        max-width: 690px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: tomato;
+        border-radius: 45px 45px 0 0;
+
+        h3 {
+            padding-left: 20px;
+        }
+
+    }
+}
+
+.bloc_carte {
+    @include height-width(320px, 100%);
+    max-width: 690px;
+    margin: 0 auto;
+    padding: 0 15px;
+    background-color: lightseagreen;
 }

@@ -1,0 +1,42 @@
+// ---------- FONT FAMILY 
+%font-family-titre {
+    font-family: $titre;
+}
+
+%font-family-texte {
+    font-family: $texte;
+}
+// ---------- POSITION IMAGE 
+%img-position {
+    object-fit: cover;
+    object-position: center;
+}
+// ---------- CURSOR
+%default-cursor {
+    cursor: default;
+}
+// ---------- FLEXBOX
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%flex-texte-center {
+    justify-content: center;
+    text-align: center;
+}
+
+%flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+// ---------- POSITION
+%relative {
+    position: relative;
+}
+
+%absolute {
+    position: absolute;
+}
