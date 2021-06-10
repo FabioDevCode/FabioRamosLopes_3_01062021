@@ -1,0 +1,5 @@
+// Fonction pour adapter la hauteur de la page en foonction du nombre de plats
+// Voir dans commun.scss ---> class à positionner (ou a créer) 
+@function height_nbplats($nbplats) {
+    @return 715px + (85px * $nbplats)
+}

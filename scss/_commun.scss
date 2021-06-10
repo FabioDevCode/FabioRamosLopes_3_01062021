@@ -3,7 +3,7 @@
 body {
     background-color: $grisfoncé;
     @extend %font-family-texte;
-    min-width: 320px;
+    min-width: 375px;
 }
 
 h1 {
@@ -52,6 +52,25 @@ h6 {
     }
 
 }
+
+/* ---------- NOUVEAU Restaurant ----------*/
+.nouveau {
+    cursor: default !important;
+    height: 30px !important;
+    width: 80px !important;
+    background-color: $tertiaire !important;
+    color: $nouveau !important;
+    position: absolute !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border-radius: 3px !important;
+    top: 13px !important;
+    right: 13px !important;
+    font-size: 0.95em !important;
+    font-weight: 600 !important;
+}
+
 
 /* ---------- LISTE DE CARTES ---------- */
 
@@ -159,17 +178,23 @@ h6 {
 /* ------ Bloc like ------- */
 
 .carte_restaurant__blocicon {
-    cursor: pointer;
     @extend %relative;
-    display: flex;
+    @extend %flex-center;
     @include height-width(75px, 90px);
     border-radius: $raduisBD20;
+
+    &:hover .premier_coeur {
+        opacity: 0;
+    }
     
     .carte_restaurant__icon {
+        cursor: pointer;
         @extend %absolute;
         @extend %flex-center;
         font-size: 1.7em;
         @include height-width(75px, 75px);
+
+        
     }
 
     .coeur_plein {
@@ -180,9 +205,8 @@ h6 {
 
         &:hover {
             opacity: 1;
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
-        
     }
 
     .premier_coeur {
@@ -194,4 +218,16 @@ h6 {
         }
     }
 
+}
+
+// ------------- Hauteur du main en fonction du nombre de plats
+// pour les pages restaurant id= main_restaurant
+/*Class à placer en fonction des restaurants et du nombre 
+de plats (avec 3 section: entrée, plats, desserts). */
+.nbplats_9 {
+    height: height_nbplats(9);
+}
+
+.nbplats_10 {
+    height: height_nbplats(10);
 }

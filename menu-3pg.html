@@ -4,9 +4,234 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/347b4bbeba.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/logo/icononglet.jpg">
+    <link rel="stylesheet" href="./scss/style.css">
     <title>La palette du goût</title>
 </head>
-<body>
+
+<body class="page_restaurant">
     
+    <header class="header">
+        <a class="header__divback" href="index.html"><i class="fas fa-arrow-left"></i></a>
+        <h1>ohmyfood</h1>
+    </header>
+
+
+    <main id="main_restaurant" class="nbplats_9">
+        <img class="img_main" src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="plats gastronomique">
+        <section class="image_bannière">
+            <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="plats gastronomique">
+        </section>
+
+        <section class="cartes">
+            
+            <div class="lacarte">
+                <div class="cartes_bloctitre">
+
+                    <h3>La palette du goût</h3>
+    
+                    <div class="carte_restaurant__blocicon">
+                        <i class="far fa-heart carte_restaurant__icon premier_coeur"></i>
+                        <i class="fas fa-heart carte_restaurant__icon coeur_plein"></i>
+                    </div>
+    
+                </div>
+    
+                <div class="bloc_carte">
+                    <div class="container_titre">
+                        <h5 class="container_titre__letitre">ENTRÉES</h5>
+                        <div class="container_titre__letrait"></div>
+                    </div>
+    
+                    <div class="bloc_carte__plats">
+                        <div class="container_plats">
+                            <div class="bloc_plats__textes">
+                                <p class="plat">Fricassée d'escargot</p>
+                                <p class="plat_description">Au piment d'Espelette</p>
+                            </div>
+                            <div class="plat_prix">
+                                25€
+                            </div>
+                            <div class="animation_choix">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bloc_carte__plats">
+                        <div class="container_plats">
+                            <div class="bloc_plats__textes">
+                                <p class="plat">Foie gras de canard mi-cuit</p>
+                                <p class="plat_description">Et ses copeaux de truffe noire</p>
+                            </div>
+                            <div class="plat_prix">
+                                35€
+                            </div>
+                            <div class="animation_choix">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bloc_carte__plats">
+                        <div class="container_plats">
+                            <div class="bloc_plats__textes">
+                                <p class="plat">Oeuf au plat</p>
+                                <p class="plat_description">Assaisonné à la truffe sur lit de caviar</p>
+                            </div>
+                            <div class="plat_prix">
+                                20€
+                            </div>
+                            <div class="animation_choix">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="bloc_carte">
+                    <div class="container_titre">
+                        <h5 class="container_titre__letitre">PLATS</h5>
+                        <div class="container_titre__letrait"></div>
+                    </div>
+    
+                    <div class="bloc_carte__plats">
+                        <div class="container_plats">
+                            <div class="bloc_plats__textes">
+                                <p class="plat">Filet de boeuf aux herbes</p>
+                                <p class="plat_description">Accompagné de sa ribambelle de légumes</p>
+                            </div>
+                            <div class="plat_prix">
+                                40€
+                            </div>
+                            <div class="animation_choix">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bloc_carte__plats">
+                        <div class="container_plats">
+                            <div class="bloc_plats__textes">
+                                <p class="plat">Parmentier de queue de boeuf</p>
+                                <p class="plat_description">À la truffe noire sur sa purée de panais</p>
+                            </div>
+                            <div class="plat_prix">
+                                35€
+                            </div>
+                            <div class="animation_choix">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bloc_carte__plats">
+                        <div class="container_plats">
+                            <div class="bloc_plats__textes">
+                                <p class="plat">Filet de turbot</p>
+                                <p class="plat_description">Aux agrumes</p>
+                            </div>
+                            <div class="plat_prix">
+                                44€
+                            </div>
+                            <div class="animation_choix">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="bloc_carte">
+                    <div class="container_titre">
+                        <h5 class="container_titre__letitre">DESSERTS</h5>
+                        <div class="container_titre__letrait"></div>
+                    </div>
+    
+                    <div class="bloc_carte__plats">
+                        <div class="container_plats">
+                            <div class="bloc_plats__textes">
+                                <p class="plat">Paris-Brest</p>
+                                <p class="plat_description">Revisité</p>
+                            </div>
+                            <div class="plat_prix">
+                                18€
+                            </div>
+                            <div class="animation_choix">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bloc_carte__plats">
+                        <div class="container_plats">
+                            <div class="bloc_plats__textes">
+                                <p class="plat">Macaron au chocolat d'exception</p>
+                                <p class="plat_description">Et glace à la vanille de Madagascar</p>
+                            </div>
+                            <div class="plat_prix">
+                                22€
+                            </div>
+                            <div class="animation_choix">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bloc_carte__plats">
+                        <div class="container_plats">
+                            <div class="bloc_plats__textes">
+                                <p class="plat">Mousse au chocolat </p>
+                                <p class="plat_description">Au piment d'Espelette et à la truffe noire</p>
+                            </div>
+                            <div class="plat_prix">
+                                23€
+                            </div>
+                            <div class="animation_choix">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="bloc_bouton">
+                    <button class="cartes_bouton bouton">Commander</button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer id="pieddepage">
+        <div class="pieddepage_bloctexte">
+
+            <h4 class="pieddepage_bloctexte__titre">ohmyfood</h4>
+
+            <div class="pieddepage_bloctexte__texte">
+                <i class="fas fa-utensils"></i>
+                <p>Proposer un restaurant</p>
+            </div>
+            <div class="pieddepage_bloctexte__texte">
+                <i class="fas fa-hands-helping"></i>
+                <p>Devenir partenaire</p>
+            </div>
+            <div class="pieddepage_bloctexte__texte">
+                <p>Mentions légales</p>
+            </div>
+            <div class="pieddepage_bloctexte__texte">
+                <a href="mailto:contact@ohmyfood.fr">Contact</a>
+            </div>
+
+        </div>
+    </footer>
 </body>
+
 </html>

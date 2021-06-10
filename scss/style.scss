@@ -1,4 +1,5 @@
 @import "_variables.scss";
+@import "_functions.scss";
 @import "_mixins.scss";
 @import "_placeholders.scss";
 @import "_reset.scss";
@@ -6,7 +7,7 @@
 @import "_commun.scss";
 
 
-//---------------------HEADER
+//--------------------- HEADER
 header {
     @extend %relative;
     z-index: 500;
@@ -30,7 +31,7 @@ header {
  
 }
 
-//---------------------INPUT (choix de ville)
+//--------------------- INPUT (choix de ville)
 .sectionchoixville {
     @include height-width(50px, 100%);
     background-color: $grisfoncé;
@@ -80,7 +81,7 @@ header {
     }
 }
 
-//---------------------HERO-BANNIERE (titre, description & bouton) 
+//--------------------- HERO-BANNIERE (titre, description & bouton) 
 .heroban {
     z-index: 10;
     @include height-width(288px, 100%);
@@ -144,6 +145,7 @@ main {
     }
 }
 
+/* ------------PAGE RESTAURANT---------- */
 /* MAIN - Restaurants */
 .bloc_restaurants {
     display: flex;
@@ -222,9 +224,12 @@ main {
 
 #main_restaurant {
     @extend %relative;
-    background-color: $grisclaire;
-    border-radius: 25px 25px 0 0;
-    overflow: initial;
+    background-color: $blanc;
+    width: 100%;
+
+    .img_main {
+        display: none;
+    }
 }
 
 .image_bannière {
@@ -240,7 +245,7 @@ main {
 
 .cartes {
     @extend %absolute;
-    @include height-width(1200px, 100%);
+    @include height-width(auto, 100%);
     background-color: transparent;
     top: 220px;
 
@@ -251,20 +256,231 @@ main {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: tomato;
+        background-color: $grisfoncé;
         border-radius: 45px 45px 0 0;
+        overflow: hidden;
 
         h3 {
             padding-left: 20px;
+        }
+        /* Bouton like adaté */
+        .carte_restaurant__blocicon {
+            @include height-width(35px, 35px);
+            margin-right: 30px;
+            border-radius: 0px;
         }
 
     }
 }
 
-.bloc_carte {
-    @include height-width(320px, 100%);
+.lacarte {
+    @include height-width(auto, auto);
+    background-color: $grisfoncé;
     max-width: 690px;
     margin: 0 auto;
-    padding: 0 15px;
-    background-color: lightseagreen;
+    border-radius: 45px 45px 0 0;
+    box-shadow: $ombrerestaurant;
+}
+
+.bloc_carte {
+    @include height-width(auto, 100%);
+    max-width: 690px;
+    margin: 0 auto;
+    padding: 0 15px 20px 15px;
+    background-color: $grisfoncé;
+
+    .container_titre {
+        @include height-width(60px, 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    
+        .container_titre__letitre {
+            width: auto;
+            font-size: 1em;
+            font-weight: 400;
+            padding-bottom: 5px;
+        }
+
+        .container_titre__letrait {
+            background-color: $tertiaire;
+            height: 5px;
+            width: 40px;
+        }
+    }
+
+    .bloc_carte__plats {
+        @include height-width(70px, 100%);
+        overflow: hidden;
+        border-radius: $raduis20;
+        margin-bottom: 15px;
+        box-shadow: $ombreplat;
+        animation: apparition 1s ease-out;
+
+        &:hover i {
+            animation: rotate 600ms ease-out;
+        }
+
+        &:hover .bloc_plats__textes {
+            @include height-width(100%, calc(83.34% - 140px));
+            animation: slide 450ms linear;
+        }
+
+    }
+
+    .container_plats {
+        cursor: pointer;
+        @include height-width(70px, 120%);
+        @include flexbox (row, flex-start, center);
+        overflow: hidden;
+        background-color: $grisclaire;
+
+        .bloc_plats__textes {
+            @include height-width(100%, calc(83.34% - 70px));
+            @include flexbox (column, center, flex-start);
+            padding-left: 10px;
+            
+            .plat {
+                @extend %ellipsis;
+                display: block;
+                width: 100%;
+                font-size: 1em;
+                font-weight: 600;
+                padding-bottom: 5px;
+            }
+
+            .plat_description {
+                @extend %ellipsis;
+                display: block;
+                width: 100%;
+                font-size: 1em;
+            }
+        }
+
+        .plat_prix {
+            @include height-width (70px, 72px);
+            min-width: 70px;
+            @include flexbox (column, flex-end, center);
+            padding-bottom: 10px;
+            font-size: 1em;
+            font-weight: 600;    
+        }
+
+        .animation_choix {
+            background-color: $tertiaire;
+            @include height-width (70px, 70px);
+            font-weight: bold;
+            font-size: 1.5em;
+            color: $blanc;
+            @include flexbox (row, center, center);
+        }
+    }
+}
+
+@keyframes apparition {
+    0% {
+        opacity: 0;
+        transform: translateY(55px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes slide {
+    0% {
+        @include height-width(100%, calc(83.34% - 70px));
+    }
+    100% {
+        @include height-width(100%, calc(83.34% - 140px));
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-270deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.bloc_bouton {
+    @include height-width(175px, 100%);
+    max-width: 690px;
+    @include flexbox(row, center, flex-start);
+    padding-top: 35px;
+
+    .cartes_bouton {
+        width: 40%;
+        margin: 0 auto;
+        min-width: 185px;
+        
+    }
+}
+
+// --------------- RESPONSIVE page restaurant
+
+@media screen and (min-width: 690px) {
+
+    #main_restaurant {
+        overflow: hidden;
+        
+        .img_main {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            object-fit: cover;
+            object-position: center;  
+        }
+    }
+
+    .image_bannière {
+        display: none;
+    }
+
+    .cartes {
+
+        .cartes_bloctitre, .bloc_carte, .bloc_bouton  {
+
+            background-color: rgba($color: $grisfoncé, $alpha: 0.85);
+        }
+
+        .lacarte {
+            background-color: transparent;
+        }
+    }
+
+    #pieddepage {
+        
+        .pieddepage_bloctexte {
+            height: 100%;
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .pieddepage_bloctexte__titre {
+                position: absolute;
+                top: 25px;
+            }
+
+            .pieddepage_bloctexte__texte p {
+                padding-top: 45px;
+                margin-bottom: 0px;
+            }
+
+            .pieddepage_bloctexte__texte i {
+                padding-top: 45px;
+                margin-bottom: 0px;
+            }
+
+            .pieddepage_bloctexte__texte a {
+                padding-top: 45px;
+                margin-bottom: 0px;
+            }
+        }
+    }
 }

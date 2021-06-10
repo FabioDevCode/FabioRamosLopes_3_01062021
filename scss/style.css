@@ -18,7 +18,7 @@ h6, h3, h1 {
   cursor: default;
 }
 
-.carte_restaurant .carte_restaurant__bloctexte, .sectionchoixville .sectionchoixville__iconinput form .sectionchoixville__input, .sectionchoixville .sectionchoixville__iconinput form, .sectionchoixville .sectionchoixville__iconinput, .sectionchoixville, header h1, header, .carte_restaurant__blocicon .carte_restaurant__icon, .cartecoloré .cartecoloré__nombre, .cartecoloré, .cartetypeun .cartetypeun__nombre, .cartetypeun, h6 {
+.carte_restaurant .carte_restaurant__bloctexte, .sectionchoixville .sectionchoixville__iconinput form .sectionchoixville__input, .sectionchoixville .sectionchoixville__iconinput form, .sectionchoixville .sectionchoixville__iconinput, .sectionchoixville, header h1, header, .carte_restaurant__blocicon .carte_restaurant__icon, .carte_restaurant__blocicon, .cartecoloré .cartecoloré__nombre, .cartecoloré, .cartetypeun .cartetypeun__nombre, .cartetypeun, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,6 +41,12 @@ h6, h3, h1 {
 
 .cartes, .sectionchoixville .sectionchoixville__iconinput form .sectionchoixville__icon, header h1, header .header__divback, .carte_restaurant__blocicon .carte_restaurant__icon, .cartecoloré .cartecoloré__icon, .cartecoloré .cartecoloré__nombre, .cartetypeun .cartetypeun__icon, .cartetypeun .cartetypeun__nombre, h6 {
   position: absolute;
+}
+
+.bloc_carte .container_plats .bloc_plats__textes .plat_description, .bloc_carte .container_plats .bloc_plats__textes .plat {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 *, ::before, ::after, h1, h2, h3, h4, h5, h6 {
@@ -151,7 +157,7 @@ a {
   font-size: 30px;
 }
 
-body {
+body.accueil {
   overflow: initial;
   -webkit-animation: noscroll 3s ease-out 1;
           animation: noscroll 3s ease-out 1;
@@ -249,7 +255,7 @@ body {
 /* ---- Global ----*/
 body {
   background-color: #EAEAEA;
-  min-width: 320px;
+  min-width: 375px;
 }
 
 h1 {
@@ -287,6 +293,24 @@ h6 {
 .bouton:hover {
   background: linear-gradient(0deg, #9b63df 0%, #ff88de 120%);
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+/* ---------- NOUVEAU Restaurant ----------*/
+.nouveau {
+  cursor: default !important;
+  height: 30px !important;
+  width: 80px !important;
+  background-color: #99e2d0 !important;
+  color: #169475 !important;
+  position: absolute !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border-radius: 3px !important;
+  top: 13px !important;
+  right: 13px !important;
+  font-size: 0.95em !important;
+  font-weight: 600 !important;
 }
 
 /* ---------- LISTE DE CARTES ---------- */
@@ -375,13 +399,15 @@ h6 {
 
 /* ------ Bloc like ------- */
 .carte_restaurant__blocicon {
-  cursor: pointer;
-  display: flex;
   height: 75px;
   width: 90px;
   border-radius: 0 0 20px 0;
 }
+.carte_restaurant__blocicon:hover .premier_coeur {
+  opacity: 0;
+}
 .carte_restaurant__blocicon .carte_restaurant__icon {
+  cursor: pointer;
   font-size: 1.7em;
   height: 75px;
   width: 75px;
@@ -395,13 +421,23 @@ h6 {
 }
 .carte_restaurant__blocicon .coeur_plein:hover {
   opacity: 1;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .carte_restaurant__blocicon .premier_coeur {
   color: #000000;
 }
 .carte_restaurant__blocicon .premier_coeur:hover {
   color: transparent;
+}
+
+/*Class à placer en fonction des restaurants et du nombre 
+de plats (avec 3 section: entrée, plats, desserts). */
+.nbplats_9 {
+  height: 1480px;
+}
+
+.nbplats_10 {
+  height: 1565px;
 }
 
 header {
@@ -524,6 +560,7 @@ main {
   width: 100%;
 }
 
+/* ------------PAGE RESTAURANT---------- */
 /* MAIN - Restaurants */
 .bloc_restaurants {
   display: flex;
@@ -590,9 +627,11 @@ main {
 
 /* ---------- PAGE DE RESTAURANT ---------*/
 #main_restaurant {
-  background-color: #F6F6F6;
-  border-radius: 25px 25px 0 0;
-  overflow: initial;
+  background-color: #FFF;
+  width: 100%;
+}
+#main_restaurant .img_main {
+  display: none;
 }
 
 .image_bannière {
@@ -605,7 +644,7 @@ main {
 }
 
 .cartes {
-  height: 1200px;
+  height: auto;
   width: 100%;
   background-color: transparent;
   top: 220px;
@@ -618,18 +657,254 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: tomato;
+  background-color: #EAEAEA;
   border-radius: 45px 45px 0 0;
+  overflow: hidden;
+  /* Bouton like adaté */
 }
 .cartes .cartes_bloctitre h3 {
   padding-left: 20px;
 }
+.cartes .cartes_bloctitre .carte_restaurant__blocicon {
+  height: 35px;
+  width: 35px;
+  margin-right: 30px;
+  border-radius: 0px;
+}
+
+.lacarte {
+  height: auto;
+  width: auto;
+  background-color: #EAEAEA;
+  max-width: 690px;
+  margin: 0 auto;
+  border-radius: 45px 45px 0 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
 
 .bloc_carte {
-  height: 320px;
+  height: auto;
   width: 100%;
   max-width: 690px;
   margin: 0 auto;
-  padding: 0 15px;
-  background-color: lightseagreen;
+  padding: 0 15px 20px 15px;
+  background-color: #EAEAEA;
+}
+.bloc_carte .container_titre {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.bloc_carte .container_titre .container_titre__letitre {
+  width: auto;
+  font-size: 1em;
+  font-weight: 400;
+  padding-bottom: 5px;
+}
+.bloc_carte .container_titre .container_titre__letrait {
+  background-color: #99e2d0;
+  height: 5px;
+  width: 40px;
+}
+.bloc_carte .bloc_carte__plats {
+  height: 70px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  -webkit-animation: apparition 1s ease-out;
+          animation: apparition 1s ease-out;
+}
+.bloc_carte .bloc_carte__plats:hover i {
+  -webkit-animation: rotate 600ms ease-out;
+          animation: rotate 600ms ease-out;
+}
+.bloc_carte .bloc_carte__plats:hover .bloc_plats__textes {
+  height: 100%;
+  width: calc(83.34% - 140px);
+  -webkit-animation: slide 450ms linear;
+          animation: slide 450ms linear;
+}
+.bloc_carte .container_plats {
+  cursor: pointer;
+  height: 70px;
+  width: 120%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  background-color: #F6F6F6;
+}
+.bloc_carte .container_plats .bloc_plats__textes {
+  height: 100%;
+  width: calc(83.34% - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 10px;
+}
+.bloc_carte .container_plats .bloc_plats__textes .plat {
+  display: block;
+  width: 100%;
+  font-size: 1em;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+.bloc_carte .container_plats .bloc_plats__textes .plat_description {
+  display: block;
+  width: 100%;
+  font-size: 1em;
+}
+.bloc_carte .container_plats .plat_prix {
+  height: 70px;
+  width: 72px;
+  min-width: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 10px;
+  font-size: 1em;
+  font-weight: 600;
+}
+.bloc_carte .container_plats .animation_choix {
+  background-color: #99e2d0;
+  height: 70px;
+  width: 70px;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #FFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@-webkit-keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(55px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(55px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    height: 100%;
+    width: calc(83.34% - 70px);
+  }
+  100% {
+    height: 100%;
+    width: calc(83.34% - 140px);
+  }
+}
+@keyframes slide {
+  0% {
+    height: 100%;
+    width: calc(83.34% - 70px);
+  }
+  100% {
+    height: 100%;
+    width: calc(83.34% - 140px);
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.bloc_bouton {
+  height: 175px;
+  width: 100%;
+  max-width: 690px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 35px;
+}
+.bloc_bouton .cartes_bouton {
+  width: 40%;
+  margin: 0 auto;
+  min-width: 185px;
+}
+
+@media screen and (min-width: 690px) {
+  #main_restaurant {
+    overflow: hidden;
+  }
+  #main_restaurant .img_main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+
+  .image_bannière {
+    display: none;
+  }
+
+  .cartes .cartes_bloctitre, .cartes .bloc_carte, .cartes .bloc_bouton {
+    background-color: rgba(234, 234, 234, 0.85);
+  }
+  .cartes .lacarte {
+    background-color: transparent;
+  }
+
+  #pieddepage .pieddepage_bloctexte {
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #pieddepage .pieddepage_bloctexte .pieddepage_bloctexte__titre {
+    position: absolute;
+    top: 25px;
+  }
+  #pieddepage .pieddepage_bloctexte .pieddepage_bloctexte__texte p {
+    padding-top: 45px;
+    margin-bottom: 0px;
+  }
+  #pieddepage .pieddepage_bloctexte .pieddepage_bloctexte__texte i {
+    padding-top: 45px;
+    margin-bottom: 0px;
+  }
+  #pieddepage .pieddepage_bloctexte .pieddepage_bloctexte__texte a {
+    padding-top: 45px;
+    margin-bottom: 0px;
+  }
 }/*# sourceMappingURL=style.css.map */
