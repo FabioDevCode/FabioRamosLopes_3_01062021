@@ -198,9 +198,10 @@ h6 {
 
     .coeur_plein {
         background: linear-gradient(0deg, $primaire 0%, $secondaire 80%);
-        background-clip: text;
+        -webkit-background-clip: text;
         color: transparent;
         opacity: 0;
+        
 
         &:hover {
             opacity: 1;
